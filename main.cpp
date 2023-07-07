@@ -8,7 +8,7 @@
 #include "Player.h"
 
 using namespace std;
-
+ 
 
 
 bool getRandomBool() {
@@ -18,7 +18,14 @@ bool getRandomBool() {
 
     // Generate a random number (0 or 1)
     int randomNumber = distribution(randomEngine);
-    return (randomNumber == 1);
+    if (randomNumber == 1) {
+        return true;
+    }
+    else if (randomNumber == 0)
+    {
+        return false;
+    }
+     
 }
 
 void selectCharacter(string& userInput) {
